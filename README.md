@@ -22,6 +22,7 @@ Built from scratch with Python, this framework features a **vectorized backtesti
 
 The repository follows a professional quantitative software architecture:
 
+```text
  Bollinger-MACD-Strategy
  ┣ main.py             # System entry point; orchestrates the workflow
  ┣ strategy.py         # Data download, indicator calculations, and signal logic
@@ -29,11 +30,12 @@ The repository follows a professional quantitative software architecture:
  ┣ visualize.py        # Matplotlib-based generation of equity curves and charts
  ┣ requirements.txt    # Python package dependencies
  ┗ README.md           # Project documentation
+```
 
 ##  Project Structure
 
 The strategy strictly ensures that the portfolio can only hold one directional position at a time (Flat or Long, no short).
-
+```text
 Entry Signal (Buy):
 Close Price > Upper Bollinger Band (Breakout)
 MACD > Signal Line (Bullish Momentum)
@@ -42,7 +44,7 @@ Exit Signal (Sell):
 Close Price < Middle Bollinger Band (Loss of Trend) OR
 MACD < Signal Line (Momentum Divergence)
 Hard Stop-Loss (e.g., -5%) or Take-Profit (e.g., +12%) hit.
-
+```
 ##  Quick Start
 
 1. Clone de repository
