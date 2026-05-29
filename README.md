@@ -22,7 +22,6 @@ Built from scratch with Python, this framework features a **vectorized backtesti
 
 The repository follows a professional quantitative software architecture:
 
-```text
  Bollinger-MACD-Strategy
  ┣ main.py             # System entry point; orchestrates the workflow
  ┣ strategy.py         # Data download, indicator calculations, and signal logic
@@ -31,7 +30,7 @@ The repository follows a professional quantitative software architecture:
  ┣ requirements.txt    # Python package dependencies
  ┗ README.md           # Project documentation
 
-## Strategic Logic 
+##  Project Structure
 
 The strategy strictly ensures that the portfolio can only hold one directional position at a time (Flat or Long, no short).
 
@@ -44,11 +43,10 @@ Close Price < Middle Bollinger Band (Loss of Trend) OR
 MACD < Signal Line (Momentum Divergence)
 Hard Stop-Loss (e.g., -5%) or Take-Profit (e.g., +12%) hit.
 
-## Quick Start
+##  Quick Start
 
 1. Clone de repository
 git clone https://github.com/ZiweiTANG0/BollingerMACD_Quantitative_Investment.git
-
 cd BollingerMACD_Quantitative_Investment
 
 2. Install dependencies 
