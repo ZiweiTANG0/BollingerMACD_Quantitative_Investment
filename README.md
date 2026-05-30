@@ -6,18 +6,28 @@
 
 ## Overview
 
-Welcome to the **Bollinger-MACD Trading Framework**. This project implements a robust, modularized algorithmic trading system designed to capture market alpha using a hybrid approach of trend-following and mean-reversion. 
+Welcome to the **Bollinger-MACD Trading Framework**. 
+This project presents the Bollinger-MACD Trading Framework, a modular, fully vectorized algorithmic trading system built in Python. It implements a hybrid quantitative strategy that synthesizes two complementary market paradigms—trend-following and mean-reversion—to identify statistically significant trading opportunities.
+Designed as an end-to-end quantitative research workflow, the framework features a state-machine-driven signal generation,custom-built backtesting engine,  and comprehensive performance visualization. It demonstrates how mathematical indicators can be operationalized into a robust, risk-controlled trading system, with full accounting for real-world financial market frictions（comission fee, slippage).
 
-Built from scratch with Python, this framework features a **vectorized backtesting engine, dynamic state-machine signal generation, and comprehensive performance visualization**, demonstrating a complete quantitative research workflow. 
 
 ##  Key Features
 
-- **Hybrid Signal Generation:** Combines Bollinger Bands (volatility/mean-reversion), MACD (momentum), and Volume Moving Averages (confirmation) to generate high-probability trade setups.
-- **Robust Backtesting Engine:** A custom-built, vectorized backtester that accounts for real-world trading constraints including initial capital, commission fees, and slippage.
-- **Strict Risk Management:** Hard-coded logic for trailing Stop-Loss and Take-Profit limits to preserve capital.
-- **Performance Analytics:** Calculates institutional-grade metrics including CAGR, Maximum Drawdown, Sharpe Ratio, Sortino Ratio, and Calmar Ratio.
-- **Modular Architecture:** Clean software design separating data ingestion, strategy logic, trade execution, and visualization.
+- **Hybrid Multi‑Factor Strategy**
+  Integrates Bollinger Bands for mean‑reversion detection, MACD for trend and momentum identification, and volume‑weighted moving averages for signal validation. The combined rule‑based framework enhances signal reliability and reduces market noise.
 
+- **10‑Year Cross‑Cycle Validation**
+  Rigorously backtested over a full 10‑year historical period, delivering stable performance across bull, bear, and sideways market regimes. The strategy achieves positive cumulative returns and consistent alpha generation while maintaining controlled drawdowns.
+
+- **Realistic Backtesting Engine**
+  Implements a complete transaction simulation pipeline with initial capital constraints, tradable order execution, transaction costs, and price slippage. Designed to eliminate look‑ahead bias and ensure reproducible, out‑of‑sample results.
+
+- **Systematic Risk Management**
+  Embeds built‑in risk controls including trailing stop‑loss and take‑profit mechanisms to dynamically limit downside exposure and lock in accumulated returns, improving risk‑adjusted performance metrics.
+
+- **Standardized Performance Analytics**
+  Computes institutional‑grade evaluation metrics including CAGR, Sharpe ratio, Sortino ratio, maximum drawdown, and cumulative excess return versus benchmarks, enabling rigorous quantitative assessment of strategy efficiency.
+  
 ##  Project Structure
 
 The repository follows a professional quantitative software architecture:
