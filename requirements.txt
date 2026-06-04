@@ -1,0 +1,13 @@
+# Data & numerics
+numpy>=1.24
+pandas>=2.0
+TA-Lib
+
+# Market data download (Yahoo Finance, e.g. 000300.SS)
+yfinance>=0.2.40
+
+# Visualisation
+matplotlib>=3.7
+
+# Statistical validation (ADF stationarity test in validation.py)
+statsmodels>=0.14
