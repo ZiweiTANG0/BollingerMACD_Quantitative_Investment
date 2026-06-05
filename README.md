@@ -101,7 +101,7 @@ repeatable edge across time.
 
 ## Conclusion
 
-The four checks form a coherent — and, for the strategy, unflattering — picture.
+The four checks form a coherent and, for the strategy, unflattering picture.
 Whole-sample, the strategy is *marginally* better than random timing (it beats
 93% of random strategies, but at p = 0.068, short of significance). Yet its
 Sharpe ratio is statistically indistinguishable from zero (95% CI
