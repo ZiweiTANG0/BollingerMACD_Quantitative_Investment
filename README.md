@@ -67,9 +67,6 @@ Exit (Sell):  Close < Middle Bollinger Band     (loss of trend) OR
 | Max drawdown | −11.45% | — |
 | Win rate | 47.95% | — |
 
-> *Confirm these against your latest `print_summary` output.* The strategy
-> "beats" a benchmark that lost money, but +4.37% over a decade is essentially
-> flat — which is exactly why the numbers need to be tested, not celebrated.
 
 ## Statistical validation — honest findings
 
