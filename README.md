@@ -3,7 +3,24 @@
 > **Author:** Ziwei Tang
 > **Updated:** June 2026
 > **Language:** Python 3.10+
-> **Origin:** Extends a strategy first prototyped at a 2019 Python Quantitative Trading Camp (QTC, Shenzhen), rebuilt here as a full research workflow.
+> **Origin:** First prototyped in 2019, rebuilt here as a full research workflow with statistical validation.
+
+## Background
+
+I built the first version of this strategy in 2019, while I was a French-literature
+undergraduate. With no programming or quantitative-trading background, I taught myself
+Python from scratch to take part in the QTC Python Quantitative Trading Camp (Shenzhen) —
+a selective five-day program run with the Center for Quantitative Investment Research at
+Tsinghua University Shenzhen International Graduate School. My team placed **third**, and I
+received an Outstanding-Student recommendation from the Center. I documented the whole
+cross-field journey — the finance, the maths, and the code — in a write-up at the time:
+[一周入门 Python 量化投资实录 (WeChat)](https://mp.weixin.qq.com/s?__biz=MzU4NDc4NzEyNg==&mid=2247483672&idx=1&sn=24d07c5d8b228c3df493dcbdb0bddfcf&chksm=fce4de97fe6bd17145d8e84c45114080a645b2437d6b402f76f7d1c77c63704ae9cb828b7922).
+
+That experience is a large part of why I am pursuing applied mathematics: it showed me
+both that I could cross into quantitative work on my own, and how much of the underlying
+mathematics I still wanted to understand properly. This repository is the 2026 rebuild of
+that project — the same idea, re-implemented as a rigorous workflow that does not just
+report performance but **tests whether it is real**.
 
 ## Overview
 
@@ -58,7 +75,7 @@ Exit (Sell):  Close < Middle Bollinger Band     (loss of trend) OR
               Stop-loss (−5%) or Take-profit (+12%) hit
 ```
 
-## Headline backtest results (CSI 300, 2016–2026)
+## Headline backtest results (CSI 300, 2021–2026)
 
 | Metric | Strategy | Benchmark (buy & hold) |
 |---|---|---|
@@ -67,6 +84,9 @@ Exit (Sell):  Close < Middle Bollinger Band     (loss of trend) OR
 | Max drawdown | −11.45% | — |
 | Win rate | 47.95% | — |
 
+> The strategy "beats" a benchmark that lost money over the period, but +4.37%
+> over roughly five years is essentially flat — which is exactly why the numbers
+> need to be tested, not celebrated.
 
 ## Statistical validation — honest findings
 
@@ -101,13 +121,13 @@ repeatable edge across time.
 
 ## Conclusion
 
-The four checks form a coherent and, for the strategy, unflattering picture.
+The four checks form a coherent — and, for the strategy, unflattering — picture.
 Whole-sample, the strategy is *marginally* better than random timing (it beats
 93% of random strategies, but at p = 0.068, short of significance). Yet its
 Sharpe ratio is statistically indistinguishable from zero (95% CI
 [−1.09, +1.08]), and the sub-period analysis explains the tension: essentially
 all of the apparent performance comes from one of four time windows, with the
-rest negative. With only ~17 round-trip trades over a decade, the sample is too
+rest negative. With only ~17 round-trip trades over the period, the sample is too
 small to support a firm claim of edge in any case.
 
 I treat this as the project's most useful result. A simple rule-based signal of
